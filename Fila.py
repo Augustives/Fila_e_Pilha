@@ -5,7 +5,7 @@ class Fila:
         self.__primeiro = None
         self.__ultimo = None
 
-    def add(self, valor):
+    def enqueue(self, valor):
         novo_elemento = ElementoFila(valor)
 
         if self.__primeiro == None:
@@ -15,7 +15,7 @@ class Fila:
             self.__ultimo.proximo_setter(novo_elemento)
             self.__ultimo = novo_elemento
 
-    def remove(self):
+    def dequeue(self):
         print("Valor: " + str(self.__primeiro))
         self.__primeiro = self.__primeiro.proximo()
 
@@ -24,3 +24,9 @@ class Fila:
 
     def vazia(self):
         return self.__primeiro == None
+
+    def head(self):
+        return self.__primeiro
+
+    def tail(self):
+        return self.__ultimo
