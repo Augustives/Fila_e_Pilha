@@ -86,6 +86,9 @@ class ControladorPrincipal:
         if int(escolha) == 2:
             self.__limitefila = input("Digite um inteiro para ser o limite de valores da fila.")
 
+    def top(self):
+        return self.__pilha.top()
+
     def head(self):
         return self.__fila.head()
 
